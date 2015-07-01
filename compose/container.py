@@ -25,7 +25,7 @@ class Container(object):
         new_dictionary = {
             'Id': dictionary['Id'],
             'Image': dictionary['Image'],
-            'Name': '/' + get_container_name(dictionary),
+            'Name': '/' + (get_container_name(dictionary) or ''),
         }
         return cls(client, new_dictionary, **kwargs)
 
